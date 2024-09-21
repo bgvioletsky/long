@@ -13,3 +13,46 @@ body{
     padding: 0;
     width: 100%;
 }
+
+li{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+}
+.header{
+    height: 60px;
+    width: 100%;
+}
+.header{
+    margin: 0 auto;
+}
+.navbar-nav{
+    background-color: #c2e271;
+    /* float: left; */
+    width: 25%;
+    display: -webkit-flex;
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+}
+.card >img{
+    width: 50%;
+}
+
+
+@media (min-width:600px) {
+    nav {
+      float: left;
+      width: 25%;
+    }
+    section {
+      margin-left: 25%;
+    }
+  }
+@media (max-width:599px) {
+    nav li {
+      display: inline;
+    }
+  }
