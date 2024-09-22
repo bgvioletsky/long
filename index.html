@@ -11,73 +11,61 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav class="navbar">
-            <ul class="navbar-nav">
-                <li>
-                    <a class="nav-link" href="#">首页</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">书源</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">其他</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="html/login.html">注册</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="html/update.html">上传</a>
-                </li>
-            </ul>
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
+    <div class="header bgshadow">
+        <div class="container1">
+            <div class="navbar">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#"><img src="src/246x0w.webp"
+                                style="height: 60px ;width: 60px; border-radius: 5px; "></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">首页</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">书源</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">其他</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" onclick="document.getElementById('id03').style.display='block'"
+                            style="width:auto;">上传</a>
+                    </li>
+                </ul>
+
             </div>
-            <div class="login"> 
-                <button onclick="document.getElementById('id02').style.display='block'" style="width:auto; ">注册</button>
+            <div class="navbar1">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="login">
+                    <button onclick="document.getElementById('id02').style.display='block'"
+                        style="width:auto; ">注册</button>
 
-                <button onclick="document.getElementById('id01').style.display='block'"
-                    style="width:auto;">登录</button>
-            </div>
-    </div>
-    </div>
-    </nav>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container- row">
-        <div class="left col-sm-3">
-            <div class="card " style="background-color: var(--bs-red);">
-
-                <img class="rounded-circle card-img-top"
-                    src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png" alt="辣椒の酱"
-                    style="width: 200px;height: 200px; margin: auto;">
-
-
-
+                    <button onclick="document.getElementById('id01').style.display='block'"
+                        style="width:auto;">登录</button>
+                </div>
             </div>
         </div>
-        <div class="content col-sm-6">s</div>
-        <div class="right col-sm-3">s</div>
+    </div>
+    <div class="content">
+        <div class="container2">
+            <div class="left bgshadow">
+                <div class="card ">
+                    <img 
+                        src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png" alt="辣椒の酱"
+                        ">
+                </div>
+            </div>
+            <div class="center bgshadow">s</div>
+            <div class="right bgshadow">s</div>
+        </div>
     </div>
     <div class="footer"></div>
     <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
         <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
             method="post">
             <div class="container">
@@ -106,13 +94,8 @@
                 <div class="container">
                     <label><b>用户名</b></label>
                     <input type="text" placeholder="Enter Username" name="username" required>
-
                     <label><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
-
-
-
-
                     <label><b>验证码</b></label>
                     <div style="display: flex; align-items: center;">
                         <input type="text" placeholder="验证码" id="captcha" name="captcha" required
@@ -121,17 +104,49 @@
                             style="width: 100px; height: 40px; padding: 0px; font-size: 14px;border-bottom-left-radius: 0px; border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
                     </div>
                     <span id="captcha-timer"></span>
-
-
-
                     <label><b>密码</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
-
                     <label><b>重复密码</b></label>
                     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
                     <input type="checkbox" checked="checked"> Remember me
                     <p>创建帐户即表示您同意我们的 <a href="#">条款和隐私</a>.</p>
-
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                            class="cancelbtn" style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
+                            Cancel
+                        </button>
+                        <button type="submit" class="signupbtn"
+                            style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="id03" class="modal  ">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
+            method="post">
+            <div class="container">
+                <div class="container">
+                    <label><b>用户名</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <label><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <label><b>验证码</b></label>
+                    <div style="display: flex; align-items: center;">
+                        <input type="text" placeholder="验证码" id="captcha" name="captcha" required
+                            style="flex: 1; border-top-left-radius: 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 0px;border-top-right-radius: 0px">
+                        <button class="btn btn-outline-secondary" type="button" id="captcha-btn" onclick="getCaptcha()"
+                            style="width: 100px; height: 40px; padding: 0px; font-size: 14px;border-bottom-left-radius: 0px; border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
+                    </div>
+                    <span id="captcha-timer"></span>
+                    <label><b>密码</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label><b>重复密码</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <input type="checkbox" checked="checked"> Remember me
+                    <p>创建帐户即表示您同意我们的 <a href="#">条款和隐私</a>.</p>
                     <div class="clearfix">
                         <button type="button" onclick="document.getElementById('id02').style.display='none'"
                             class="cancelbtn" style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
