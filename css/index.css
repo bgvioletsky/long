@@ -149,7 +149,7 @@ a {
 }
 
 .margin-left_20 {
-    margin: 0 0 0 20px;
+    margin:  0 20px;
 
 }
 
@@ -163,7 +163,40 @@ a {
     width: 70%;
     margin-right: 20px;
     margin-left: 20px;
+
 }
+
+
+
+.card {
+    margin: 30px auto;
+    align-items: center;
+
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+
+.avatar:hover {
+    animation: rotate 0.8s forwards;
+}
+
+.avatar:not(:hover) {
+    animation: rotate1 0.8s forwards;
+}
+
+.pp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media screen and (max-width: 1400px) {
     .img {
@@ -178,6 +211,7 @@ a {
 
     .center {
         width: 100%;
+        margin: 0 auto;
     }
 
     .header {
@@ -258,7 +292,7 @@ a {
     .search-box {
         height: 40px;
         display: flex;
-        width: 300px;
+        width: 250px;
     }
 
     .login {
@@ -275,41 +309,15 @@ a {
         font-size: 12px;
         background-color: rgb(38, 182, 231);
     }
-
+    .container2 {
+        margin: 30px auto;
+        width: 80%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
 
 }
-
-.card {
-    margin: 30px auto;
-    align-items: center;
-
-}
-
-.avatar {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto;
-    transition: transform 0.5s ease;
-}
-
-.avatar:hover {
-    animation: rotate 0.8s forwards;
-}
-
-.avatar:not(:hover) {
-    animation: rotate1 0.8s forwards;
-}
-
-.pp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
 /* 宽屏输入字段 */
 input[type=text],
 input[type=password] {
