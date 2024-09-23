@@ -105,7 +105,7 @@ a {
 
 
 .container2 {
-    width: 80%;
+    width: 70%;
     margin: 30px auto;
    
     display: flex;
@@ -120,16 +120,34 @@ a {
     align-items: center;
     flex-direction: column;
     background-color: white;
+    height: 400px;
 }
 
-
-.right {
-    width: 20%;
-    margin-left :20px;
+.layui-panel{
+    display: flex;
+    flex-direction: column;
+}
+.layui-panel>blockquote{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    height: 50px;
+    margin: 0 0 0 0px;
+    border-left: 5px solid #16b777;
+}
+.layui-panel>blockquote > h3{
+    
+    margin: 0 0 0 10px;
+ 
 }
 
+.margin-left_20{
+    margin: 0 0 0 20px;
+
+}
 .center {
-    width: 60%;
+    width: 80%;
     margin-right :20px;
     margin-left :20px;
 }
