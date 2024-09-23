@@ -7,8 +7,12 @@ body {
     background-color: #E9FAFF;
 }
 
-.bgshadow{
+.bgshadow {
     box-shadow: 0 4px 10px rgba(0, 0, 0, .05);
+  
+}
+.bg-br{
+    border-radius: 20px;
 }
 .header {
     height: 60px;
@@ -30,6 +34,13 @@ body {
     padding: 0;
     display: flex;
     height: 60px;
+}
+
+.nav-link {
+color: #000;
+}
+.nav-link:focus {
+    color: #4ee4e9;
 }
 
 .navbar1 {
@@ -58,8 +69,8 @@ li {
     margin-left: 0;
     list-style: none;
     width: 60px;
-    margin-left:0px ;
-    margin-right:auto ;
+    margin-left: 0px;
+    margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
 
@@ -85,43 +96,68 @@ a {
 }
 
 .login>button {
-    margin: auto 0 auto auto;;
+    margin: auto 0 auto auto;
+    ;
     height: 40px;
     padding: 0px 25px;
-    
+
 }
 
 
-.container2{
+.container2 {
     width: 80%;
     margin: 30px auto;
-    background-color: #888;
+   
     display: flex;
 }
 
-.left{
-    background-color: #E9FAFF;
-    margin: 0 auto;
-}
 .left {
+    background-color: #E9FAFF;
+    margin-right :20px;
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
 }
-.right{
- width: 20%;
+
+
+.right {
+    width: 20%;
+    margin-left :20px;
 }
+
 .center {
     width: 60%;
+    margin-right :20px;
+    margin-left :20px;
 }
-.card{
-    margin: 0 auto;
+
+.card {
+    margin: 30px auto;
     align-items: center;
+   
 }
-.card > img {
+
+.avatar {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+.avatar:hover{
+    animation: rotate 0.8s forwards;
+}
+.avatar:not(:hover) {
+    animation: rotate1 0.8s forwards;
+}
+.pp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (min-width:600px) {
     /* nav {
@@ -320,4 +356,21 @@ button {
 
 #captcha-btn {
     margin: 0;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate1 {
+    from {
+        
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }
