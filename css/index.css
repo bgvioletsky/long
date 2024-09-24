@@ -660,7 +660,7 @@ input[type=password] {
     .upload_area>label {
         height: 100%;
         width: 100%;
-        margin-top: 100px;
+        /* margin-top: 100px; */
     }
 
     .svgup {
