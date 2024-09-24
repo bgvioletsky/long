@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="login" class="box">
+        <span onclick="document.getElementById('login').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <div class="box_container">
+            <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
+                method="post">
+
+                <div class="box_input">
+                    <label><b>邮箱</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label><b>密码</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button class="bt-login" type="submit">登陆</button>
+                    <div class="other">
+                        <div class="remeber"> <input type="checkbox" checked="checked"> 记住我</div>
+                        <span class="psw"><a href="#">忘记密码？</a></span>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

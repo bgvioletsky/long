@@ -1,7 +1,7 @@
 // 获取登录模型
-var modal1 = document.getElementById('id01');
+var modal1 = document.getElementById('login');
 // 获取注册模型
-var modal2 = document.getElementById('id02');
+var modal2 = document.getElementById('sigin');
 
 // 鼠标点击模型外区域关闭登录框和注册框
 window.onclick = function (event) {
@@ -12,12 +12,36 @@ window.onclick = function (event) {
         modal2.style.display = "none";
     }
 }
+var modal3 = document.getElementById('uplaod');
+window.onclick = function (event) {
+    if (event.target == modal3) {
+        if (modal3.style.display == "none") {
+            modal3.style.display = "block";
+        } else {
+            modal3.style.display = "none";
+        }
+    }
+}
+function close_open() {
+    var mod = document.getElementById('uplaod');
+    var content = document.getElementById('content');
 
+
+    if (mod.style.display == "none") {
+        mod.style.display = "block";
+        content.style.display = "none";
+    } else {
+        mod.style.display = "none";
+        content.style.display = "block";
+    }
+
+
+}
 function post_login(userName, passWord) {
     if (!userName || !passWord) {
         alert("请输入手机号、密码！");
     } else {
-        $.post("/user/action.html", {action: "123", username: '123', password: '123'}, function (data) {
+        $.post("/user/action.html", { action: "123", username: '123', password: '123' }, function (data) {
             if (data == -1) {
                 alert("密码错误或手机号不存在，请重新登陆！");
             } else if (data == 1) {
@@ -36,20 +60,20 @@ function post_login(userName, passWord) {
 }
 
 
-var bt01 = document.getElementById("captcha-btn"); 
-bt01.onclick = function() { 
-  bt01.disabled = true;  //当点击后倒计时时候不能点击此按钮 
-  var time = 60;  //倒计时5秒 
-  var timer = setInterval(fun1, 1000);  //设置定时器 
-  function fun1() { 
-    time--; 
-    if(time>=0) { 
-      bt01.innerHTML = time + "s后重新发送"; 
-    }else{ 
-      bt01.innerHTML = "重新发送验证码"; 
-      bt01.disabled = false;  //倒计时结束能够重新点击发送的按钮 
-      clearTimeout(timer);  //清除定时器 
-      time = 60;  //设置循环重新开始条件 
-    } 
-  } 
+var bt01 = document.getElementById("captcha-btn");
+bt01.onclick = function () {
+    bt01.disabled = true;  //当点击后倒计时时候不能点击此按钮 
+    var time = 60;  //倒计时5秒 
+    var timer = setInterval(fun1, 1000);  //设置定时器 
+    function fun1() {
+        time--;
+        if (time >= 0) {
+            bt01.innerHTML = time + "s后重新发送";
+        } else {
+            bt01.innerHTML = "重新发送验证码";
+            bt01.disabled = false;  //倒计时结束能够重新点击发送的按钮 
+            clearTimeout(timer);  //清除定时器 
+            time = 60;  //设置循环重新开始条件 
+        }
+    }
 }

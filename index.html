@@ -17,8 +17,7 @@
             <div class="navbar">
                 <ul class="navbar-nav">
                     <li>
-                        <a href="#"><img class="img" src="src/246x0w.webp"
-                                ></a>
+                        <a href="#"><img class="img" src="src/246x0w.webp"></a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">首页</a>
@@ -30,7 +29,7 @@
                         <a class="nav-link" href="#">其他</a>
                     </li>
                     <li>
-                        <a class="nav-link" onclick="document.getElementById('id03').style.display='block'"
+                        <a class="nav-link" onclick="close_open()"
                             style="width:auto;">上传</a>
                     </li>
                 </ul>
@@ -41,22 +40,21 @@
                     <input type="text" placeholder="Search...">
                 </div>
                 <div class="login">
-                    <button onclick="document.getElementById('id02').style.display='block'"
+                    <button onclick="document.getElementById('sigin').style.display='block'"
                         style="width:auto; ">注册</button>
 
-                    <button onclick="document.getElementById('id01').style.display='block'"
+                    <button onclick="document.getElementById('login').style.display='block'"
                         style="width:auto;">登录</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="content" id="content" style="display: block;">
         <div class="container2">
             <div class="left bgshadow bg-br">
                 <div class="card ">
                     <div class="card-img">
-                        <img class="avatar"
-                            src="src/246x0w.webp">
+                        <img class="avatar" src="src/246x0w.webp">
                     </div>
                 </div>
                 <div class=" card-body"">
@@ -66,144 +64,142 @@
                 </div>
             </div>
             <div class="center bgshadow bg-br">
-                    <div class="layui-panel">
-                        <blockquote  >
-                            <h3>极简阅读</h3>
-                        </blockquote>
-                        <div class="margin-left_20">
-                            <p>欢迎使用极简阅读器！ 这款精心没计的阅读软件将为您带来无与伦比的阅读体验。无论是轻松浏览您喜爱的小说，还是专注问读工作文档，我们都为您提供了全方位的功能.</p>
-                            <p>极简阅读器，实用且易用，致力于为您带来极致阅读体验。立即下载，尽情享受阅读的乐趣吧！</p>
+                <div class="layui-panel">
+                    <blockquote>
+                        <h3>极简阅读</h3>
+                    </blockquote>
+                    <div class="margin-left_20">
+                        <p>欢迎使用极简阅读器！ 这款精心没计的阅读软件将为您带来无与伦比的阅读体验。无论是轻松浏览您喜爱的小说，还是专注问读工作文档，我们都为您提供了全方位的功能.</p>
+                        <p>极简阅读器，实用且易用，致力于为您带来极致阅读体验。立即下载，尽情享受阅读的乐趣吧！</p>
 
-                        </div>
-                        <blockquote  >
-                            <h3>简介</h3>
-                        </blockquote>
-                        <div class="margin-left_20">
-                            <p>1、自定义书源，自己设置规则，抓取网页数据，规则简单易懂，软件内有规则说明</p>
-                            <p>2、书源规则支持搜索及发现，所有找书看书功能全部自定义，找书更方便</p>
-                            <p>3、支持高度自定义阅读界面，切换字体、颜色、背景、行距、段距、加粗、简繁转换等</p>
-                            <p>4、支持替换净化，去除广告替换内容很方便</p>
-                            <p>5、支持本地TXT、EPUB阅读，手动浏览，智能扫描</p>
-                            <p>6、支持多种翻页模式，覆盖、仿真、滑动、滚动等</p>
-
-                        </div>
-                        <blockquote >
-                            <h3>相关链接</h3>
-                        </blockquote>
-                        <div class="margin-left_20">
-                            <p><a href=""target="_blank">阅读APP开源地址</a></p>
-                            <p><a href=""target="_blank">喵公子-喵公子订阅源</a></p>
-                            <p><a href=""target="_blank">喵公子的B站地址</a></p>
-                            <p><a href=""target="_blank">一程的书源，RSS源，更新地址</a></p>
-                            <p><a href=""target="_blank">XIU2 的书源和订阅源</a></p>
-                            <p><a href=""target="_blank">「阅读」APP 源</a></p>
-                        </div>
-        
-        
-        
                     </div>
+                    <blockquote>
+                        <h3>简介</h3>
+                    </blockquote>
+                    <div class="margin-left_20">
+                        <p>1、自定义书源，自己设置规则，抓取网页数据，规则简单易懂，软件内有规则说明</p>
+                        <p>2、书源规则支持搜索及发现，所有找书看书功能全部自定义，找书更方便</p>
+                        <p>3、支持高度自定义阅读界面，切换字体、颜色、背景、行距、段距、加粗、简繁转换等</p>
+                        <p>4、支持替换净化，去除广告替换内容很方便</p>
+                        <p>5、支持本地TXT、EPUB阅读，手动浏览，智能扫描</p>
+                        <p>6、支持多种翻页模式，覆盖、仿真、滑动、滚动等</p>
+
+                    </div>
+                    <blockquote>
+                        <h3>相关链接</h3>
+                    </blockquote>
+                    <div class="margin-left_20">
+                        <p><a href="" target="_blank">阅读APP开源地址</a></p>
+                        <p><a href="" target="_blank">喵公子-喵公子订阅源</a></p>
+                        <p><a href="" target="_blank">喵公子的B站地址</a></p>
+                        <p><a href="" target="_blank">一程的书源，RSS源，更新地址</a></p>
+                        <p><a href="" target="_blank">XIU2 的书源和订阅源</a></p>
+                        <p><a href="" target="_blank">「阅读」APP 源</a></p>
+                    </div>
+
+
+
                 </div>
             </div>
-          
-        
-    </div>
-    <div class="footer"></div>
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-        <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
-            method="post">
-            <div class="container">
-                <label><b>邮箱</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+        </div>
 
-                <label><b>密码</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit">登陆</button>
-                <input type="checkbox" checked="checked"> 记住我
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <span class="psw"><a href="#">忘记密码？</a></span>
-            </div>
-        </form>
 
     </div>
-    <div id="id02" class="modal  ">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-        <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
-            method="post">
+    <div class="upload" id="upload" style="display: none;">
+        <span onclick=" document.getElementById('upload').style.display='none'" class=" close"
+            title="Close Modal">×</span>
+        <form class="modal-content animate"
+            onsubmit="event.preventDefault(); uploadFile(title.value, sourceUrl.value, desc.value, fileInput.files[0]);"
+            method="post" enctype="multipart/form-data">
             <div class="container">
                 <div class="container">
-                    <label><b>用户名</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-                    <label><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-                    <label><b>验证码</b></label>
-                    <div style="display: flex; align-items: center;">
-                        <input type="text" placeholder="验证码" id="captcha" name="captcha" required
-                            style="flex: 1; border-top-left-radius: 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 0px;border-top-right-radius: 0px">
-                        <button class="btn btn-outline-secondary" type="button" id="captcha-btn" onclick="getCaptcha()"
-                            style="width: 100px; height: 40px; padding: 0px; font-size: 14px;border-bottom-left-radius: 0px; border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
-                    </div>
-                    <span id="captcha-timer"></span>
-                    <label><b>密码</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <label><b>重复密码</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    <input type="checkbox" checked="checked"> Remember me
-                    <p>创建帐户即表示您同意我们的 <a href="#">条款和隐私</a>.</p>
+                    <label><b>标题</b></label>
+                    <input type="text" placeholder="Enter Title" name="title" required="">
+                    <label><b>源链接</b></label>
+                    <input type="text" placeholder="Enter Source URL" name="sourceUrl" required="">
+                    <label><b>描述</b></label>
+                    <textarea placeholder="Enter Description" name="desc" required=""></textarea>
+                    <label><b>上传文件</b></label>
+                    <input type="file" name="file" required="" id="fileInput">
                     <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id02').style.display='none'"
-                            class="cancelbtn" style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
-                            Cancel
-                        </button>
-                        <button type="submit" class="signupbtn"
-                            style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;">Sign Up</button>
+                        <button type="button" onclick="document.getElementById('id03').style.display='none'"
+                            class="cancelbtn">取消</button>
+                        <button type="submit" class="uploadbtn">上传</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-    <div id="id03" class="modal  ">
-        <span onclick="document.getElementById('id03').style.display='none'" class="close"
+    <div id="login" class="box">
+        <span onclick="document.getElementById('login').style.display='none'" class="close"
             title="Close Modal">&times;</span>
-        <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
-            method="post">
-            <div class="container">
-                <div class="container">
-                    <label><b>用户名</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-                    <label><b>Email</b></label>
+        <div class="box_container">
+            <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
+                method="post">
+
+                <div class="box_input">
+                    <label><b>邮箱</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
-                    <label><b>验证码</b></label>
-                    <div style="display: flex; align-items: center;">
-                        <input type="text" placeholder="验证码" id="captcha" name="captcha" required
-                            style="flex: 1; border-top-left-radius: 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 0px;border-top-right-radius: 0px">
-                        <button class="btn btn-outline-secondary" type="button" id="captcha-btn" onclick="getCaptcha()"
-                            style="width: 100px; height: 40px; padding: 0px; font-size: 14px;border-bottom-left-radius: 0px; border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
-                    </div>
-                    <span id="captcha-timer"></span>
+
                     <label><b>密码</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
-                    <label><b>重复密码</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    <input type="checkbox" checked="checked"> Remember me
-                    <p>创建帐户即表示您同意我们的 <a href="#">条款和隐私</a>.</p>
-                    <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id02').style.display='none'"
-                            class="cancelbtn" style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
-                            Cancel
-                        </button>
-                        <button type="submit" class="signupbtn"
-                            style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;">Sign Up</button>
+
+                    <button class="bt-login" type="submit">登陆</button>
+                    <div class="other">
+                        <div class="remeber"> <input type="checkbox" checked="checked"> 记住我</div>
+                        <span class="psw"><a href="#">忘记密码？</a></span>
                     </div>
                 </div>
-            </div>
+
+            </form>
+        </div>
+    </div>
+    <div id="sigin" class="box">
+        <span onclick="document.getElementById('sigin').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <div class="box_container">
+            <form class="modal-content animate" onsubmit="event.preventDefault(); post_login(email.value, psw.value);"
+                method="post">
+                <div class="box_input">
+                    <div class="container">
+                        <label><b>用户名</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+                        <label><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+                        <label><b>验证码</b></label>
+                        <div style="display: flex; align-items: center;">
+                            <input class="btn_input" type="text" placeholder="验证码" id="captcha-btn" name="captcha" required
+                                style=" border-top-left-radius: 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
+                            <button class="btn btn-outline-secondary" type="button" onclick="getCaptcha()"
+                                style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
+                        </div>
+                        <span id="captcha-timer"></span>
+                        <label><b>密码</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <label><b>重复密码</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        <div class="other1">
+                            <div><input type="checkbox" checked="checked"> Remember me</div>
+                            <div class="clearfix"> <button type="button"
+                                    onclick="document.getElementById('sigin').style.display='none'" class="cancelbtn"
+                                    style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
+                                    取消
+                                </button>
+                                <button type="submit" class="signupbtn"
+                                    style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;">注册</button>
+                            </div>
+                            <p>创建帐户即表示您同意我们的 <a href="#">条款和隐私</a>.</p>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+        </div>
         </form>
     </div>
+
 </body>
 
 </html>
