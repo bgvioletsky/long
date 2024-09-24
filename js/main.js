@@ -12,18 +12,9 @@ window.onclick = function (event) {
         modal2.style.display = "none";
     }
 }
-var modal3 = document.getElementById('uplaod');
-window.onclick = function (event) {
-    if (event.target == modal3) {
-        if (modal3.style.display == "none") {
-            modal3.style.display = "block";
-        } else {
-            modal3.style.display = "none";
-        }
-    }
-}
+
 function close_open() {
-    var mod = document.getElementById('uplaod');
+    var mod = document.getElementById('upload');
     var content = document.getElementById('content');
 
 
