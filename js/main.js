@@ -13,6 +13,13 @@ window.onclick = function (event) {
     }
 }
 
+const uploadArea = document.getElementById('uploadArea');
+const fileInput = document.getElementById('fileInput');
+
+uploadArea.addEventListener('click', () => {
+  fileInput.click();
+});
+
 function close_open() {
     var mod = document.getElementById('upload');
     var content = document.getElementById('content');
