@@ -643,15 +643,13 @@ input[type=password] {
     }
 
     .btn_input {
-        /* width: 60%; */
-        width: 100%;
+        width: 50%;
         height: 40px;
     }
 
     #captcha-btn {
         height: 40px;
-        /* margin: 8px 0; */
-        font-size: 6px;
+        font-size: 8px;
     }
 
     .upload {
