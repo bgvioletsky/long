@@ -109,9 +109,9 @@
             onsubmit="event.preventDefault(); uploadFile(title.value, sourceUrl.value, desc.value, fileInput.files[0]);"
             method="post" enctype="multipart/form-data">
             <div class="container">
-                <div class="upload_area"id="uploadArea">
+                <div class="upload_area" id="uploadArea">
                     <input type="file" name="file" required="" id="fileInput">
-                    <label >
+                    <label>
 
                         <svg class="svgup" viewBox="0 0 1024 1024" focusable="false" data-icon="inbox"
                             fill="currentColor" aria-hidden="true">
@@ -136,13 +136,13 @@
                     </div>
                     <div class="item2">
                         <label><b>描述</b></label>
-                        <textarea placeholder="Enter Description" name="desc" required=""style='height: 100px;'></textarea>
+                        <textarea placeholder="Enter Description" name="desc" required=""
+                            style='height: 100px;'></textarea>
                     </div>
-                    
+
                 </div>
                 <div class="clearfix1">
-                    <button type="button" onclick="close_open()"
-                        class="cancelbtn">取消</button>
+                    <button type="button" onclick="close_open()" class="cancelbtn">取消</button>
                     <button type="submit" class="uploadbtn">上传</button>
                 </div>
             </div>
@@ -186,11 +186,12 @@
                         <input type="text" placeholder="Enter Email" name="email" required>
                         <label><b>验证码</b></label>
                         <div style="display: flex; align-items: center;">
-                            <input class="btn_input" type="text" placeholder="验证码" id="captcha-btn" name="captcha"
-                                required
+                            <input class="btn_input" type="text" placeholder="验证码" name="captcha" required
                                 style=" border-top-left-radius: 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 0px;border-top-right-radius: 0px;">
-                            <button class="btn btn-outline-secondary" type="button" onclick="getCaptcha()"
-                                style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
+                            <div  class="btn_input">
+                                <button class="btnss " id="captcha-btn" type="button" onclick="getCaptcha()"
+                                    style=" border-bottom-left-radius: 0px;border-top-left-radius: 0px;border-top-right-radius: 30px;border-bottom-right-radius: 30px;">获取验证码</button>
+                            </div>
                         </div>
                         <span id="captcha-timer"></span>
                         <label><b>密码</b></label>
