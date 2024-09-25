@@ -1,7 +1,7 @@
 // 获取登录模型
 var modal1 = document.getElementById('login');
 // 获取注册模型
-var modal2 = document.getElementById('sigin');
+var modal2 = document.getElementById('sign');
 
 // 鼠标点击模型外区域关闭登录框和注册框
 window.onclick = function (event) {
